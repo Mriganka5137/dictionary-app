@@ -67,6 +67,6 @@
 
 @layer components {
   .main-container {
-    @apply mx-auto max-w-screen-desktop px-6 tablet:px-10 laptop:px-80 bg-background text-foreground h-screen w-full;
+    @apply mx-auto max-w-screen-desktop px-6 tablet:px-10 laptop:px-36 desktop:px-80 h-screen w-full;
   }
 }
