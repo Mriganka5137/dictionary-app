@@ -6,8 +6,11 @@ import { useState } from "react";
 import searchLogo from "@/public/assets/images/icon-search.svg";
 import Meaning from "@/components/shared/Meaning";
 import NotFound from "@/components/shared/NotFound";
+import { useStore } from "@/lib/store";
+import Loading from "@/components/shared/Loading";
 
 export default function Home() {
+  const fontType = useStore((state) => state.fontType);
   const [search, setSearch] = useState("");
   const [empty, setEmpty] = useState(false);
   const query = useQuery({
@@ -21,9 +24,9 @@ export default function Home() {
     enabled: false,
     retry: false,
   });
-
+  // console.log(fontType);
   return (
-    <section className="w-full h-fit mb-36">
+    <section className={`w-full h-fit mb-36 ${fontType}`}>
       <form
         className="w-full bg-muted  rounded-[18px] relative"
         onSubmit={(e) => {
@@ -58,7 +61,7 @@ export default function Home() {
       {empty && <p className=" text-destructive">Whoops, can't be empty</p>}
 
       {query.isLoading ? (
-        <p>Loading...</p>
+        <Loading />
       ) : query.isError ? (
         <NotFound data={query.error.response.data} />
       ) : (

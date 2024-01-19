@@ -40,7 +40,7 @@ const Meaning = ({ data }: Props) => {
         ))}
       </div>
       <div className=" border-t-2 mt-10"></div>
-      <div className=" flex gap-5">
+      <div className=" flex gap-5 mt-5">
         <p className="text-secondary underline">Source</p>
         <Link
           href={sourceUrls[0]}
