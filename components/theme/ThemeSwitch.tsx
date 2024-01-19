@@ -20,7 +20,7 @@ const ThemeSwitch = () => {
       setInitial(false);
       setTheme("light");
     }
-  }, []);
+  }, [setTheme]);
 
   return (
     <div className=" flex items-center gap-5">

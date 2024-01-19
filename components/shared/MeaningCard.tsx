@@ -21,9 +21,9 @@ const MeaningCard = ({ data }: Props) => {
             <>
               <li className=" text-body-m">{item.definition}</li>
               {item.example && (
-                <blockquote className="text-secondary text-[18px]">
-                  "{item.example}"
-                </blockquote>
+                <p className="text-secondary text-[18px]">
+                  &quot;{item.example}&quot;
+                </p>
               )}
             </>
           ))}
