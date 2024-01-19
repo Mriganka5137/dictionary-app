@@ -57,7 +57,9 @@ export default function Home() {
           }`}
         />
       </form>
-      {empty && <p className=" text-destructive">Whoops, can't be empty</p>}
+      {empty && (
+        <p className=" text-destructive">Whoops, can&apos;t be empty</p>
+      )}
 
       {query.isLoading ? (
         <Loading />
