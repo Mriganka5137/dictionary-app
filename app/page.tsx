@@ -1,6 +1,6 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import Image from "next/image";
 import { useState } from "react";
 import searchLogo from "@/public/assets/images/icon-search.svg";
@@ -24,7 +24,6 @@ export default function Home() {
     enabled: false,
     retry: false,
   });
-  // console.log(fontType);
   return (
     <section className={`w-full h-fit mb-36 ${fontType}`}>
       <form
@@ -63,7 +62,7 @@ export default function Home() {
       {query.isLoading ? (
         <Loading />
       ) : query.isError ? (
-        <NotFound data={query.error.response.data} />
+        <NotFound />
       ) : (
         query.data && <Meaning data={query.data} />
       )}

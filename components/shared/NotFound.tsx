@@ -1,25 +1,15 @@
 import React from "react";
-interface Props {
-  data: NotFoundData;
-}
 
-interface NotFoundData {
-  title: string;
-  message: string;
-  resolution: string;
-}
-
-const NotFound = ({ data: { title, message, resolution } }: Props) => {
+const NotFound = () => {
   return (
     <div className="  text-center mt-40 space-y-5">
       <h1 className=" text-5xl">😶‍🌫️</h1>
-      <h2 className=" text-heading-s">{title}</h2>
+      <h2 className=" text-heading-s">No Definitions Found</h2>
       <p className=" text-secondary">
-        {message}
-        {""}
-        {resolution}
+        Sorry pal, we couldn't find definitions for the word you were looking
+        for.You can try the search again at later time or head to the web
+        instead.
       </p>
-      <p></p>
     </div>
   );
 };
