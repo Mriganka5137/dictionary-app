@@ -20,19 +20,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <QueryClientProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            enableSystem={true}
-            disableTransitionOnChange
-          >
-            <main className=" main-container min-h-screen ">
+        <main className=" main-container   min-h-screen">
+          <QueryClientProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="light"
+              enableSystem={true}
+              disableTransitionOnChange
+            >
               <Navbar />
               {children}
-            </main>
-          </ThemeProvider>
-        </QueryClientProvider>
+            </ThemeProvider>
+          </QueryClientProvider>
+        </main>
       </body>
     </html>
   );

@@ -18,7 +18,7 @@ const Meaning = ({ data }: Props) => {
     <section className=" mt-11 pb-36">
       <div className=" flex justify-between items-center max-tablet:flex-col max-tablet:items-start gap-5">
         <div>
-          <h1 className=" text-heading-l">{word}</h1>
+          <h1 className=" text-heading-l max-laptop:text-3xl">{word}</h1>
           <h4 className=" text-heading-m text-primary">{phonetic}</h4>
         </div>
         {audioFile && (
@@ -40,12 +40,12 @@ const Meaning = ({ data }: Props) => {
         ))}
       </div>
       <div className=" border-t-2 mt-10"></div>
-      <div className=" flex gap-5 mt-5 max-tablet:flex-col">
+      <div className=" flex gap-5 mt-5 max-tablet:flex-col ">
         <p className="text-secondary underline">Source</p>
         <Link
           href={sourceUrls[0]}
           target="blank"
-          className=" underline decoration-secondary decoration-1 underline-offset-[2px]"
+          className=" underline decoration-secondary decoration-1 underline-offset-[2px] max-tablet:text-xs hover:text-primary"
         >
           {sourceUrls}
         </Link>

@@ -25,7 +25,7 @@ export default function Home() {
     retry: false,
   });
   return (
-    <section className={`w-full h-fit mb-36 ${fontType}`}>
+    <section className={` mb-36  ${fontType}`}>
       <form
         className="w-full bg-muted  rounded-[18px] relative"
         onSubmit={(e) => {
@@ -61,9 +61,7 @@ export default function Home() {
         <p className=" text-destructive">Whoops, can&apos;t be empty</p>
       )}
 
-      {query.isLoading ? (
-        <Loading />
-      ) : query.isError ? (
+      {query.isError ? (
         <NotFound />
       ) : (
         query.data && <Meaning data={query.data} />
