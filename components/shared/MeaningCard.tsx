@@ -33,7 +33,9 @@ const MeaningCard = ({ data }: Props) => {
           <div className=" text-[20px] mt-16 text-secondary flex flex-wrap w-full max-laptop:text-[14px]">
             <p>Synonyms</p>
             {synonyms.map((item, index) => (
-              <span className="text-primary  font-medium ml-5">{item}</span>
+              <span key={index} className="text-primary  font-medium ml-5">
+                {item}
+              </span>
             ))}
           </div>
         </>
