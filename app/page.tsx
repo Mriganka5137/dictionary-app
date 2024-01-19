@@ -1,5 +1,4 @@
 "use client";
-/* eslint-disable react/no-unescaped-entities */
 import { useQuery } from "@tanstack/react-query";
 import axios, { AxiosError } from "axios";
 import Image from "next/image";
